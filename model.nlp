@@ -1,0 +1,308 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "applic,develop,is,of,the,this,who": {
+            "intent": "about",
+            "domain": "default"
+          },
+          "is,thanish,who": {
+            "intent": "about",
+            "domain": "default"
+          },
+          "account,open": {
+            "intent": "account.open",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "about": "default",
+          "account.open": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "who is the developer of this application",
+            "intent": "about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Who is the developer of this application",
+            "intent": "about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Who is Thanish?",
+            "intent": "about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Open account",
+            "intent": "account.open"
+          },
+          {
+            "domain": "default",
+            "utterance": "who is the developer of this application",
+            "intent": "about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Who is the developer of this application",
+            "intent": "about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Who is Thanish?",
+            "intent": "about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Open account",
+            "intent": "account.open"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "who": 1,
+              "is": 1,
+              "the": 1,
+              "develop": 1,
+              "of": 1,
+              "this": 1,
+              "applic": 1,
+              "thanish": 1,
+              "open": 1,
+              "account": 1
+            },
+            "intents": {
+              "about": 1,
+              "account.open": 1
+            },
+            "intentFeatures": {
+              "about": {
+                "who": 1,
+                "is": 1,
+                "the": 1,
+                "develop": 1,
+                "of": 1,
+                "this": 1,
+                "applic": 1,
+                "thanish": 1
+              },
+              "account.open": {
+                "open": 1,
+                "account": 1
+              }
+            },
+            "featuresToIntent": {
+              "who": [
+                "about"
+              ],
+              "is": [
+                "about"
+              ],
+              "the": [
+                "about"
+              ],
+              "develop": [
+                "about"
+              ],
+              "of": [
+                "about"
+              ],
+              "this": [
+                "about"
+              ],
+              "applic": [
+                "about"
+              ],
+              "thanish": [
+                "about"
+              ],
+              "open": [
+                "account.open"
+              ],
+              "account": [
+                "account.open"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "who",
+                "is",
+                "the",
+                "develop",
+                "of",
+                "this",
+                "applic",
+                "thanish",
+                "open",
+                "account"
+              ],
+              "intents": [
+                "about",
+                "account.open"
+              ],
+              "perceptrons": [
+                [
+                  4.401682376861572,
+                  4.401682376861572,
+                  0.7462486624717712,
+                  0.7462486624717712,
+                  0.7462486624717712,
+                  0.7462486624717712,
+                  0.7462486624717712,
+                  3.6497862339019775,
+                  -0.8673043847084045,
+                  -0.8673043847084045,
+                  1.7663640517555739
+                ],
+                [
+                  -0.8976731896400452,
+                  -0.8976731896400452,
+                  -0.22520963847637177,
+                  -0.22520963847637177,
+                  -0.22520963847637177,
+                  -0.22520963847637177,
+                  -0.22520963847637177,
+                  -0.6662858724594116,
+                  5.861448287963867,
+                  5.861448287963867,
+                  2.4869178669492698
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "who is the developer of this application"
+      ],
+      [
+        "en",
+        "Who is the developer of this application"
+      ],
+      [
+        "en",
+        "Who is Thanish?"
+      ],
+      [
+        "en",
+        "Open account"
+      ],
+      [
+        "en",
+        "who is the developer of this application"
+      ],
+      [
+        "en",
+        "Who is the developer of this application"
+      ],
+      [
+        "en",
+        "Who is Thanish?"
+      ],
+      [
+        "en",
+        "Open account"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "acount.open": [
+          {
+            "answer": "fn:open"
+          }
+        ],
+        "about": [
+          {
+            "answer": "Thanish"
+          },
+          {
+            "answer": "Thanish and some of the batch mates"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
