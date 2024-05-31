@@ -1,0 +1,209 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "go,googl,to": {
+            "intent": "google.route",
+            "domain": "default"
+          },
+          "googl,open": {
+            "intent": "google.route",
+            "domain": "default"
+          },
+          "googl,i,need": {
+            "intent": "google.route",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "google.route": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "go to google",
+            "intent": "google.route"
+          },
+          {
+            "domain": "default",
+            "utterance": "open google",
+            "intent": "google.route"
+          },
+          {
+            "domain": "default",
+            "utterance": "I need google",
+            "intent": "google.route"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "go": 1,
+              "to": 1,
+              "googl": 1,
+              "open": 1,
+              "i": 1,
+              "need": 1
+            },
+            "intents": {
+              "google.route": 1
+            },
+            "intentFeatures": {
+              "google.route": {
+                "go": 1,
+                "to": 1,
+                "googl": 1,
+                "open": 1,
+                "i": 1,
+                "need": 1
+              }
+            },
+            "featuresToIntent": {
+              "go": [
+                "google.route"
+              ],
+              "to": [
+                "google.route"
+              ],
+              "googl": [
+                "google.route"
+              ],
+              "open": [
+                "google.route"
+              ],
+              "i": [
+                "google.route"
+              ],
+              "need": [
+                "google.route"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "go",
+                "to",
+                "googl",
+                "open",
+                "i",
+                "need"
+              ],
+              "intents": [
+                "google.route"
+              ],
+              "perceptrons": [
+                [
+                  1.8259356021881104,
+                  1.8259356021881104,
+                  7.123782157897949,
+                  3.4728922843933105,
+                  1.8217202425003052,
+                  1.8217202425003052,
+                  3.561980558447691
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "go to google"
+      ],
+      [
+        "en",
+        "open google"
+      ],
+      [
+        "en",
+        "I need google"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "google.route": [
+          {
+            "answer": "openGoogle"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

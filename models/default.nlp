@@ -1,0 +1,4353 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "is,villag,what,your": {
+            "intent": "about.from",
+            "domain": "default"
+          },
+          "are,from,where,you": {
+            "intent": "about.from",
+            "domain": "default"
+          },
+          "do,live,where,you": {
+            "intent": "about.from",
+            "domain": "default"
+          },
+          "is,name,what,your": {
+            "intent": "about.name",
+            "domain": "default"
+          },
+          "are,who,you": {
+            "intent": "about.name",
+            "domain": "default"
+          },
+          "can,me,name,tell,you,your": {
+            "intent": "about.name",
+            "domain": "default"
+          },
+          "are,how,old,you": {
+            "intent": "about.age",
+            "domain": "default"
+          },
+          "age,is,what,your": {
+            "intent": "about.age",
+            "domain": "default"
+          },
+          "age,can,me,tell,you,your": {
+            "intent": "about.age",
+            "domain": "default"
+          },
+          "do,languag,speak,what,you": {
+            "intent": "about.language",
+            "domain": "default"
+          },
+          "can,languag,other,speak,you": {
+            "intent": "about.language",
+            "domain": "default"
+          },
+          "can,communic,in,languag,which,you": {
+            "intent": "about.language",
+            "domain": "default"
+          },
+          "creat,who,you": {
+            "intent": "about.creator",
+            "domain": "default"
+          },
+          "develop,is,who,your": {
+            "intent": "about.creator",
+            "domain": "default"
+          },
+          "made,who,you": {
+            "intent": "about.creator",
+            "domain": "default"
+          },
+          "is,purpos,what,your": {
+            "intent": "about.purpose",
+            "domain": "default"
+          },
+          "do,exist,whi,you": {
+            "intent": "about.purpose",
+            "domain": "default"
+          },
+          "can,do,what,you": {
+            "intent": "about.purpose",
+            "domain": "default"
+          },
+          "ani,do,have,hobbi,you": {
+            "intent": "about.hobby",
+            "domain": "default"
+          },
+          "do,like,to,what,you": {
+            "intent": "about.hobby",
+            "domain": "default"
+          },
+          "are,interest,what,your": {
+            "intent": "about.hobby",
+            "domain": "default"
+          },
+          "color,favorit,is,what,your": {
+            "intent": "about.favorite_color",
+            "domain": "default"
+          },
+          "a,color,do,favorit,have,you": {
+            "intent": "about.favorite_color",
+            "domain": "default"
+          },
+          "color,do,like,most,the,which,you": {
+            "intent": "about.favorite_color",
+            "domain": "default"
+          },
+          "favorit,food,is,what,your": {
+            "intent": "about.food",
+            "domain": "default"
+          },
+          "do,eat,you": {
+            "intent": "about.food",
+            "domain": "default"
+          },
+          "do,eat,like,to,what,you": {
+            "intent": "about.food",
+            "domain": "default"
+          },
+          "is,like,the,weather,what": {
+            "intent": "about.weather",
+            "domain": "default"
+          },
+          "how,is,the,today,weather": {
+            "intent": "about.weather",
+            "domain": "default"
+          },
+          "can,current,me,tell,the,weather,you": {
+            "intent": "about.weather",
+            "domain": "default"
+          },
+          "is,it,time,what": {
+            "intent": "about.time",
+            "domain": "default"
+          },
+          "can,current,me,tell,the,time,you": {
+            "intent": "about.time",
+            "domain": "default"
+          },
+          "is,now,the,time,what": {
+            "intent": "about.time",
+            "domain": "default"
+          },
+          "date,is,today,what": {
+            "intent": "about.date",
+            "domain": "default"
+          },
+          "can,date,me,tell,the,today,you": {
+            "intent": "about.date",
+            "domain": "default"
+          },
+          "date,is,the,today,what": {
+            "intent": "about.date",
+            "domain": "default"
+          },
+          "a,can,joke,me,tell,you": {
+            "intent": "about.joke",
+            "domain": "default"
+          },
+          "ani,do,joke,know,you": {
+            "intent": "about.joke",
+            "domain": "default"
+          },
+          "laugh,make,me": {
+            "intent": "about.joke",
+            "domain": "default"
+          },
+          "an,fact,interest,me,tell": {
+            "intent": "about.fact",
+            "domain": "default"
+          },
+          "ani,do,fact,fun,know,you": {
+            "intent": "about.fact",
+            "domain": "default"
+          },
+          "a,can,fact,me,share,with,you": {
+            "intent": "about.fact",
+            "domain": "default"
+          },
+          "help,i,need": {
+            "intent": "about.help",
+            "domain": "default"
+          },
+          "assist,can,me,you": {
+            "intent": "about.help",
+            "domain": "default"
+          },
+          "can,help,how,me,you": {
+            "intent": "about.help",
+            "domain": "default"
+          },
+          "favorit,is,music,what,your": {
+            "intent": "about.music",
+            "domain": "default"
+          },
+          "do,like,music,you": {
+            "intent": "about.music",
+            "domain": "default"
+          },
+          "a,can,recommend,song,you": {
+            "intent": "about.music",
+            "domain": "default"
+          },
+          "is,latest,news,the,what": {
+            "intent": "about.news",
+            "domain": "default"
+          },
+          "can,me,news,tell,the,you": {
+            "intent": "about.news",
+            "domain": "default"
+          },
+          "happen,in,is,the,what,world": {
+            "intent": "about.news",
+            "domain": "default"
+          },
+          "bye": {
+            "intent": "about.goodbye",
+            "domain": "default"
+          },
+          "goodby": {
+            "intent": "about.goodbye",
+            "domain": "default"
+          },
+          "later,see,you": {
+            "intent": "about.goodbye",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "good,morn": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "afternoon,good": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "even,good": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "howdi": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "greet": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hi,there": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hey,there": {
+            "intent": "greeting",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "about.from": "default",
+          "about.name": "default",
+          "about.age": "default",
+          "about.language": "default",
+          "about.creator": "default",
+          "about.purpose": "default",
+          "about.hobby": "default",
+          "about.favorite_color": "default",
+          "about.food": "default",
+          "about.weather": "default",
+          "about.time": "default",
+          "about.date": "default",
+          "about.joke": "default",
+          "about.fact": "default",
+          "about.help": "default",
+          "about.music": "default",
+          "about.news": "default",
+          "about.goodbye": "default",
+          "greeting": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "what is your village?",
+            "intent": "about.from"
+          },
+          {
+            "domain": "default",
+            "utterance": "where are you from?",
+            "intent": "about.from"
+          },
+          {
+            "domain": "default",
+            "utterance": "where do you live?",
+            "intent": "about.from"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your name?",
+            "intent": "about.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "who are you?",
+            "intent": "about.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me your name?",
+            "intent": "about.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "how old are you?",
+            "intent": "about.age"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your age?",
+            "intent": "about.age"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me your age?",
+            "intent": "about.age"
+          },
+          {
+            "domain": "default",
+            "utterance": "what languages do you speak?",
+            "intent": "about.language"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you speak other languages?",
+            "intent": "about.language"
+          },
+          {
+            "domain": "default",
+            "utterance": "which languages can you communicate in?",
+            "intent": "about.language"
+          },
+          {
+            "domain": "default",
+            "utterance": "who created you?",
+            "intent": "about.creator"
+          },
+          {
+            "domain": "default",
+            "utterance": "who is your developer?",
+            "intent": "about.creator"
+          },
+          {
+            "domain": "default",
+            "utterance": "who made you?",
+            "intent": "about.creator"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your purpose?",
+            "intent": "about.purpose"
+          },
+          {
+            "domain": "default",
+            "utterance": "why do you exist?",
+            "intent": "about.purpose"
+          },
+          {
+            "domain": "default",
+            "utterance": "what can you do?",
+            "intent": "about.purpose"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you have any hobbies?",
+            "intent": "about.hobby"
+          },
+          {
+            "domain": "default",
+            "utterance": "what do you like to do?",
+            "intent": "about.hobby"
+          },
+          {
+            "domain": "default",
+            "utterance": "what are your interests?",
+            "intent": "about.hobby"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your favorite color?",
+            "intent": "about.favorite_color"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you have a favorite color?",
+            "intent": "about.favorite_color"
+          },
+          {
+            "domain": "default",
+            "utterance": "which color do you like the most?",
+            "intent": "about.favorite_color"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your favorite food?",
+            "intent": "about.food"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you eat?",
+            "intent": "about.food"
+          },
+          {
+            "domain": "default",
+            "utterance": "what do you like to eat?",
+            "intent": "about.food"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's the weather like?",
+            "intent": "about.weather"
+          },
+          {
+            "domain": "default",
+            "utterance": "how's the weather today?",
+            "intent": "about.weather"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me the current weather?",
+            "intent": "about.weather"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your village?",
+            "intent": "about.from"
+          },
+          {
+            "domain": "default",
+            "utterance": "where are you from?",
+            "intent": "about.from"
+          },
+          {
+            "domain": "default",
+            "utterance": "where do you live?",
+            "intent": "about.from"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your name?",
+            "intent": "about.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "who are you?",
+            "intent": "about.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me your name?",
+            "intent": "about.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "how old are you?",
+            "intent": "about.age"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your age?",
+            "intent": "about.age"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me your age?",
+            "intent": "about.age"
+          },
+          {
+            "domain": "default",
+            "utterance": "what languages do you speak?",
+            "intent": "about.language"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you speak other languages?",
+            "intent": "about.language"
+          },
+          {
+            "domain": "default",
+            "utterance": "which languages can you communicate in?",
+            "intent": "about.language"
+          },
+          {
+            "domain": "default",
+            "utterance": "who created you?",
+            "intent": "about.creator"
+          },
+          {
+            "domain": "default",
+            "utterance": "who is your developer?",
+            "intent": "about.creator"
+          },
+          {
+            "domain": "default",
+            "utterance": "who made you?",
+            "intent": "about.creator"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your purpose?",
+            "intent": "about.purpose"
+          },
+          {
+            "domain": "default",
+            "utterance": "why do you exist?",
+            "intent": "about.purpose"
+          },
+          {
+            "domain": "default",
+            "utterance": "what can you do?",
+            "intent": "about.purpose"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you have any hobbies?",
+            "intent": "about.hobby"
+          },
+          {
+            "domain": "default",
+            "utterance": "what do you like to do?",
+            "intent": "about.hobby"
+          },
+          {
+            "domain": "default",
+            "utterance": "what are your interests?",
+            "intent": "about.hobby"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your favorite color?",
+            "intent": "about.favorite_color"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you have a favorite color?",
+            "intent": "about.favorite_color"
+          },
+          {
+            "domain": "default",
+            "utterance": "which color do you like the most?",
+            "intent": "about.favorite_color"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your favorite food?",
+            "intent": "about.food"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you eat?",
+            "intent": "about.food"
+          },
+          {
+            "domain": "default",
+            "utterance": "what do you like to eat?",
+            "intent": "about.food"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's the weather like?",
+            "intent": "about.weather"
+          },
+          {
+            "domain": "default",
+            "utterance": "how's the weather today?",
+            "intent": "about.weather"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me the current weather?",
+            "intent": "about.weather"
+          },
+          {
+            "domain": "default",
+            "utterance": "what time is it?",
+            "intent": "about.time"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me the current time?",
+            "intent": "about.time"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's the time now?",
+            "intent": "about.time"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is today's date?",
+            "intent": "about.date"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me the date today?",
+            "intent": "about.date"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's the date today?",
+            "intent": "about.date"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me a joke?",
+            "intent": "about.joke"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you know any jokes?",
+            "intent": "about.joke"
+          },
+          {
+            "domain": "default",
+            "utterance": "make me laugh.",
+            "intent": "about.joke"
+          },
+          {
+            "domain": "default",
+            "utterance": "tell me an interesting fact.",
+            "intent": "about.fact"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you know any fun facts?",
+            "intent": "about.fact"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you share a fact with me?",
+            "intent": "about.fact"
+          },
+          {
+            "domain": "default",
+            "utterance": "I need help.",
+            "intent": "about.help"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you assist me?",
+            "intent": "about.help"
+          },
+          {
+            "domain": "default",
+            "utterance": "how can you help me?",
+            "intent": "about.help"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's your favorite music?",
+            "intent": "about.music"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you like music?",
+            "intent": "about.music"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you recommend a song?",
+            "intent": "about.music"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's the latest news?",
+            "intent": "about.news"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me the news?",
+            "intent": "about.news"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's happening in the world?",
+            "intent": "about.news"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye",
+            "intent": "about.goodbye"
+          },
+          {
+            "domain": "default",
+            "utterance": "goodbye",
+            "intent": "about.goodbye"
+          },
+          {
+            "domain": "default",
+            "utterance": "see you later",
+            "intent": "about.goodbye"
+          },
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hey",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "good morning",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "good afternoon",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "good evening",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "howdy",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "greetings",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi there",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hey there",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your village?",
+            "intent": "about.from"
+          },
+          {
+            "domain": "default",
+            "utterance": "where are you from?",
+            "intent": "about.from"
+          },
+          {
+            "domain": "default",
+            "utterance": "where do you live?",
+            "intent": "about.from"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your name?",
+            "intent": "about.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "who are you?",
+            "intent": "about.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me your name?",
+            "intent": "about.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "how old are you?",
+            "intent": "about.age"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your age?",
+            "intent": "about.age"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me your age?",
+            "intent": "about.age"
+          },
+          {
+            "domain": "default",
+            "utterance": "what languages do you speak?",
+            "intent": "about.language"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you speak other languages?",
+            "intent": "about.language"
+          },
+          {
+            "domain": "default",
+            "utterance": "which languages can you communicate in?",
+            "intent": "about.language"
+          },
+          {
+            "domain": "default",
+            "utterance": "who created you?",
+            "intent": "about.creator"
+          },
+          {
+            "domain": "default",
+            "utterance": "who is your developer?",
+            "intent": "about.creator"
+          },
+          {
+            "domain": "default",
+            "utterance": "who made you?",
+            "intent": "about.creator"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your purpose?",
+            "intent": "about.purpose"
+          },
+          {
+            "domain": "default",
+            "utterance": "why do you exist?",
+            "intent": "about.purpose"
+          },
+          {
+            "domain": "default",
+            "utterance": "what can you do?",
+            "intent": "about.purpose"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you have any hobbies?",
+            "intent": "about.hobby"
+          },
+          {
+            "domain": "default",
+            "utterance": "what do you like to do?",
+            "intent": "about.hobby"
+          },
+          {
+            "domain": "default",
+            "utterance": "what are your interests?",
+            "intent": "about.hobby"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your favorite color?",
+            "intent": "about.favorite_color"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you have a favorite color?",
+            "intent": "about.favorite_color"
+          },
+          {
+            "domain": "default",
+            "utterance": "which color do you like the most?",
+            "intent": "about.favorite_color"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your favorite food?",
+            "intent": "about.food"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you eat?",
+            "intent": "about.food"
+          },
+          {
+            "domain": "default",
+            "utterance": "what do you like to eat?",
+            "intent": "about.food"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's the weather like?",
+            "intent": "about.weather"
+          },
+          {
+            "domain": "default",
+            "utterance": "how's the weather today?",
+            "intent": "about.weather"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me the current weather?",
+            "intent": "about.weather"
+          },
+          {
+            "domain": "default",
+            "utterance": "what time is it?",
+            "intent": "about.time"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me the current time?",
+            "intent": "about.time"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's the time now?",
+            "intent": "about.time"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is today's date?",
+            "intent": "about.date"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me the date today?",
+            "intent": "about.date"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's the date today?",
+            "intent": "about.date"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me a joke?",
+            "intent": "about.joke"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you know any jokes?",
+            "intent": "about.joke"
+          },
+          {
+            "domain": "default",
+            "utterance": "make me laugh.",
+            "intent": "about.joke"
+          },
+          {
+            "domain": "default",
+            "utterance": "tell me an interesting fact.",
+            "intent": "about.fact"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you know any fun facts?",
+            "intent": "about.fact"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you share a fact with me?",
+            "intent": "about.fact"
+          },
+          {
+            "domain": "default",
+            "utterance": "I need help.",
+            "intent": "about.help"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you assist me?",
+            "intent": "about.help"
+          },
+          {
+            "domain": "default",
+            "utterance": "how can you help me?",
+            "intent": "about.help"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's your favorite music?",
+            "intent": "about.music"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you like music?",
+            "intent": "about.music"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you recommend a song?",
+            "intent": "about.music"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's the latest news?",
+            "intent": "about.news"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you tell me the news?",
+            "intent": "about.news"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's happening in the world?",
+            "intent": "about.news"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye",
+            "intent": "about.goodbye"
+          },
+          {
+            "domain": "default",
+            "utterance": "goodbye",
+            "intent": "about.goodbye"
+          },
+          {
+            "domain": "default",
+            "utterance": "see you later",
+            "intent": "about.goodbye"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "what": 1,
+              "is": 1,
+              "your": 1,
+              "villag": 1,
+              "where": 1,
+              "are": 1,
+              "you": 1,
+              "from": 1,
+              "do": 1,
+              "live": 1,
+              "name": 1,
+              "who": 1,
+              "can": 1,
+              "tell": 1,
+              "me": 1,
+              "how": 1,
+              "old": 1,
+              "age": 1,
+              "languag": 1,
+              "speak": 1,
+              "other": 1,
+              "which": 1,
+              "communic": 1,
+              "in": 1,
+              "creat": 1,
+              "develop": 1,
+              "made": 1,
+              "purpos": 1,
+              "whi": 1,
+              "exist": 1,
+              "have": 1,
+              "ani": 1,
+              "hobbi": 1,
+              "like": 1,
+              "to": 1,
+              "interest": 1,
+              "favorit": 1,
+              "color": 1,
+              "a": 1,
+              "the": 1,
+              "most": 1,
+              "food": 1,
+              "eat": 1,
+              "weather": 1,
+              "today": 1,
+              "current": 1,
+              "time": 1,
+              "it": 1,
+              "now": 1,
+              "date": 1,
+              "joke": 1,
+              "know": 1,
+              "make": 1,
+              "laugh": 1,
+              "an": 1,
+              "fact": 1,
+              "fun": 1,
+              "share": 1,
+              "with": 1,
+              "i": 1,
+              "need": 1,
+              "help": 1,
+              "assist": 1,
+              "music": 1,
+              "recommend": 1,
+              "song": 1,
+              "latest": 1,
+              "news": 1,
+              "happen": 1,
+              "world": 1,
+              "bye": 1,
+              "goodby": 1,
+              "see": 1,
+              "later": 1,
+              "hello": 1,
+              "hi": 1,
+              "hey": 1,
+              "good": 1,
+              "morn": 1,
+              "afternoon": 1,
+              "even": 1,
+              "howdi": 1,
+              "greet": 1,
+              "there": 1
+            },
+            "intents": {
+              "about.from": 1,
+              "about.name": 1,
+              "about.age": 1,
+              "about.language": 1,
+              "about.creator": 1,
+              "about.purpose": 1,
+              "about.hobby": 1,
+              "about.favorite_color": 1,
+              "about.food": 1,
+              "about.weather": 1,
+              "about.time": 1,
+              "about.date": 1,
+              "about.joke": 1,
+              "about.fact": 1,
+              "about.help": 1,
+              "about.music": 1,
+              "about.news": 1,
+              "about.goodbye": 1,
+              "greeting": 1
+            },
+            "intentFeatures": {
+              "about.from": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "villag": 1,
+                "where": 1,
+                "are": 1,
+                "you": 1,
+                "from": 1,
+                "do": 1,
+                "live": 1
+              },
+              "about.name": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "name": 1,
+                "who": 1,
+                "are": 1,
+                "you": 1,
+                "can": 1,
+                "tell": 1,
+                "me": 1
+              },
+              "about.age": {
+                "how": 1,
+                "old": 1,
+                "are": 1,
+                "you": 1,
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "age": 1,
+                "can": 1,
+                "tell": 1,
+                "me": 1
+              },
+              "about.language": {
+                "what": 1,
+                "languag": 1,
+                "do": 1,
+                "you": 1,
+                "speak": 1,
+                "can": 1,
+                "other": 1,
+                "which": 1,
+                "communic": 1,
+                "in": 1
+              },
+              "about.creator": {
+                "who": 1,
+                "creat": 1,
+                "you": 1,
+                "is": 1,
+                "your": 1,
+                "develop": 1,
+                "made": 1
+              },
+              "about.purpose": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "purpos": 1,
+                "whi": 1,
+                "do": 1,
+                "you": 1,
+                "exist": 1,
+                "can": 1
+              },
+              "about.hobby": {
+                "do": 1,
+                "you": 1,
+                "have": 1,
+                "ani": 1,
+                "hobbi": 1,
+                "what": 1,
+                "like": 1,
+                "to": 1,
+                "are": 1,
+                "your": 1,
+                "interest": 1
+              },
+              "about.favorite_color": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "favorit": 1,
+                "color": 1,
+                "do": 1,
+                "you": 1,
+                "have": 1,
+                "a": 1,
+                "which": 1,
+                "like": 1,
+                "the": 1,
+                "most": 1
+              },
+              "about.food": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "favorit": 1,
+                "food": 1,
+                "do": 1,
+                "you": 1,
+                "eat": 1,
+                "like": 1,
+                "to": 1
+              },
+              "about.weather": {
+                "what": 1,
+                "is": 1,
+                "the": 1,
+                "weather": 1,
+                "like": 1,
+                "how": 1,
+                "today": 1,
+                "can": 1,
+                "you": 1,
+                "tell": 1,
+                "me": 1,
+                "current": 1
+              },
+              "about.time": {
+                "what": 1,
+                "time": 1,
+                "is": 1,
+                "it": 1,
+                "can": 1,
+                "you": 1,
+                "tell": 1,
+                "me": 1,
+                "the": 1,
+                "current": 1,
+                "now": 1
+              },
+              "about.date": {
+                "what": 1,
+                "is": 1,
+                "today": 1,
+                "date": 1,
+                "can": 1,
+                "you": 1,
+                "tell": 1,
+                "me": 1,
+                "the": 1
+              },
+              "about.joke": {
+                "can": 1,
+                "you": 1,
+                "tell": 1,
+                "me": 1,
+                "a": 1,
+                "joke": 1,
+                "do": 1,
+                "know": 1,
+                "ani": 1,
+                "make": 1,
+                "laugh": 1
+              },
+              "about.fact": {
+                "tell": 1,
+                "me": 1,
+                "an": 1,
+                "interest": 1,
+                "fact": 1,
+                "do": 1,
+                "you": 1,
+                "know": 1,
+                "ani": 1,
+                "fun": 1,
+                "can": 1,
+                "share": 1,
+                "a": 1,
+                "with": 1
+              },
+              "about.help": {
+                "i": 1,
+                "need": 1,
+                "help": 1,
+                "can": 1,
+                "you": 1,
+                "assist": 1,
+                "me": 1,
+                "how": 1
+              },
+              "about.music": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "favorit": 1,
+                "music": 1,
+                "do": 1,
+                "you": 1,
+                "like": 1,
+                "can": 1,
+                "recommend": 1,
+                "a": 1,
+                "song": 1
+              },
+              "about.news": {
+                "what": 1,
+                "is": 1,
+                "the": 1,
+                "latest": 1,
+                "news": 1,
+                "can": 1,
+                "you": 1,
+                "tell": 1,
+                "me": 1,
+                "happen": 1,
+                "in": 1,
+                "world": 1
+              },
+              "about.goodbye": {
+                "bye": 1,
+                "goodby": 1,
+                "see": 1,
+                "you": 1,
+                "later": 1
+              },
+              "greeting": {
+                "hello": 1,
+                "hi": 1,
+                "hey": 1,
+                "good": 1,
+                "morn": 1,
+                "afternoon": 1,
+                "even": 1,
+                "howdi": 1,
+                "greet": 1,
+                "there": 1
+              }
+            },
+            "featuresToIntent": {
+              "what": [
+                "about.from",
+                "about.name",
+                "about.age",
+                "about.language",
+                "about.purpose",
+                "about.hobby",
+                "about.favorite_color",
+                "about.food",
+                "about.weather",
+                "about.time",
+                "about.date",
+                "about.music",
+                "about.news"
+              ],
+              "is": [
+                "about.from",
+                "about.name",
+                "about.age",
+                "about.creator",
+                "about.purpose",
+                "about.favorite_color",
+                "about.food",
+                "about.weather",
+                "about.time",
+                "about.date",
+                "about.music",
+                "about.news"
+              ],
+              "your": [
+                "about.from",
+                "about.name",
+                "about.age",
+                "about.creator",
+                "about.purpose",
+                "about.hobby",
+                "about.favorite_color",
+                "about.food",
+                "about.music"
+              ],
+              "villag": [
+                "about.from"
+              ],
+              "where": [
+                "about.from"
+              ],
+              "are": [
+                "about.from",
+                "about.name",
+                "about.age",
+                "about.hobby"
+              ],
+              "you": [
+                "about.from",
+                "about.name",
+                "about.age",
+                "about.language",
+                "about.creator",
+                "about.purpose",
+                "about.hobby",
+                "about.favorite_color",
+                "about.food",
+                "about.weather",
+                "about.time",
+                "about.date",
+                "about.joke",
+                "about.fact",
+                "about.help",
+                "about.music",
+                "about.news",
+                "about.goodbye"
+              ],
+              "from": [
+                "about.from"
+              ],
+              "do": [
+                "about.from",
+                "about.language",
+                "about.purpose",
+                "about.hobby",
+                "about.favorite_color",
+                "about.food",
+                "about.joke",
+                "about.fact",
+                "about.music"
+              ],
+              "live": [
+                "about.from"
+              ],
+              "name": [
+                "about.name"
+              ],
+              "who": [
+                "about.name",
+                "about.creator"
+              ],
+              "can": [
+                "about.name",
+                "about.age",
+                "about.language",
+                "about.purpose",
+                "about.weather",
+                "about.time",
+                "about.date",
+                "about.joke",
+                "about.fact",
+                "about.help",
+                "about.music",
+                "about.news"
+              ],
+              "tell": [
+                "about.name",
+                "about.age",
+                "about.weather",
+                "about.time",
+                "about.date",
+                "about.joke",
+                "about.fact",
+                "about.news"
+              ],
+              "me": [
+                "about.name",
+                "about.age",
+                "about.weather",
+                "about.time",
+                "about.date",
+                "about.joke",
+                "about.fact",
+                "about.help",
+                "about.news"
+              ],
+              "how": [
+                "about.age",
+                "about.weather",
+                "about.help"
+              ],
+              "old": [
+                "about.age"
+              ],
+              "age": [
+                "about.age"
+              ],
+              "languag": [
+                "about.language"
+              ],
+              "speak": [
+                "about.language"
+              ],
+              "other": [
+                "about.language"
+              ],
+              "which": [
+                "about.language",
+                "about.favorite_color"
+              ],
+              "communic": [
+                "about.language"
+              ],
+              "in": [
+                "about.language",
+                "about.news"
+              ],
+              "creat": [
+                "about.creator"
+              ],
+              "develop": [
+                "about.creator"
+              ],
+              "made": [
+                "about.creator"
+              ],
+              "purpos": [
+                "about.purpose"
+              ],
+              "whi": [
+                "about.purpose"
+              ],
+              "exist": [
+                "about.purpose"
+              ],
+              "have": [
+                "about.hobby",
+                "about.favorite_color"
+              ],
+              "ani": [
+                "about.hobby",
+                "about.joke",
+                "about.fact"
+              ],
+              "hobbi": [
+                "about.hobby"
+              ],
+              "like": [
+                "about.hobby",
+                "about.favorite_color",
+                "about.food",
+                "about.weather",
+                "about.music"
+              ],
+              "to": [
+                "about.hobby",
+                "about.food"
+              ],
+              "interest": [
+                "about.hobby",
+                "about.fact"
+              ],
+              "favorit": [
+                "about.favorite_color",
+                "about.food",
+                "about.music"
+              ],
+              "color": [
+                "about.favorite_color"
+              ],
+              "a": [
+                "about.favorite_color",
+                "about.joke",
+                "about.fact",
+                "about.music"
+              ],
+              "the": [
+                "about.favorite_color",
+                "about.weather",
+                "about.time",
+                "about.date",
+                "about.news"
+              ],
+              "most": [
+                "about.favorite_color"
+              ],
+              "food": [
+                "about.food"
+              ],
+              "eat": [
+                "about.food"
+              ],
+              "weather": [
+                "about.weather"
+              ],
+              "today": [
+                "about.weather",
+                "about.date"
+              ],
+              "current": [
+                "about.weather",
+                "about.time"
+              ],
+              "time": [
+                "about.time"
+              ],
+              "it": [
+                "about.time"
+              ],
+              "now": [
+                "about.time"
+              ],
+              "date": [
+                "about.date"
+              ],
+              "joke": [
+                "about.joke"
+              ],
+              "know": [
+                "about.joke",
+                "about.fact"
+              ],
+              "make": [
+                "about.joke"
+              ],
+              "laugh": [
+                "about.joke"
+              ],
+              "an": [
+                "about.fact"
+              ],
+              "fact": [
+                "about.fact"
+              ],
+              "fun": [
+                "about.fact"
+              ],
+              "share": [
+                "about.fact"
+              ],
+              "with": [
+                "about.fact"
+              ],
+              "i": [
+                "about.help"
+              ],
+              "need": [
+                "about.help"
+              ],
+              "help": [
+                "about.help"
+              ],
+              "assist": [
+                "about.help"
+              ],
+              "music": [
+                "about.music"
+              ],
+              "recommend": [
+                "about.music"
+              ],
+              "song": [
+                "about.music"
+              ],
+              "latest": [
+                "about.news"
+              ],
+              "news": [
+                "about.news"
+              ],
+              "happen": [
+                "about.news"
+              ],
+              "world": [
+                "about.news"
+              ],
+              "bye": [
+                "about.goodbye"
+              ],
+              "goodby": [
+                "about.goodbye"
+              ],
+              "see": [
+                "about.goodbye"
+              ],
+              "later": [
+                "about.goodbye"
+              ],
+              "hello": [
+                "greeting"
+              ],
+              "hi": [
+                "greeting"
+              ],
+              "hey": [
+                "greeting"
+              ],
+              "good": [
+                "greeting"
+              ],
+              "morn": [
+                "greeting"
+              ],
+              "afternoon": [
+                "greeting"
+              ],
+              "even": [
+                "greeting"
+              ],
+              "howdi": [
+                "greeting"
+              ],
+              "greet": [
+                "greeting"
+              ],
+              "there": [
+                "greeting"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "what",
+                "is",
+                "your",
+                "villag",
+                "where",
+                "are",
+                "you",
+                "from",
+                "do",
+                "live",
+                "name",
+                "who",
+                "can",
+                "tell",
+                "me",
+                "how",
+                "old",
+                "age",
+                "languag",
+                "speak",
+                "other",
+                "which",
+                "communic",
+                "in",
+                "creat",
+                "develop",
+                "made",
+                "purpos",
+                "whi",
+                "exist",
+                "have",
+                "ani",
+                "hobbi",
+                "like",
+                "to",
+                "interest",
+                "favorit",
+                "color",
+                "a",
+                "the",
+                "most",
+                "food",
+                "eat",
+                "weather",
+                "today",
+                "current",
+                "time",
+                "it",
+                "now",
+                "date",
+                "joke",
+                "know",
+                "make",
+                "laugh",
+                "an",
+                "fact",
+                "fun",
+                "share",
+                "with",
+                "i",
+                "need",
+                "help",
+                "assist",
+                "music",
+                "recommend",
+                "song",
+                "latest",
+                "news",
+                "happen",
+                "world",
+                "bye",
+                "goodby",
+                "see",
+                "later",
+                "hello",
+                "hi",
+                "hey",
+                "good",
+                "morn",
+                "afternoon",
+                "even",
+                "howdi",
+                "greet",
+                "there"
+              ],
+              "intents": [
+                "about.from",
+                "about.name",
+                "about.age",
+                "about.language",
+                "about.creator",
+                "about.purpose",
+                "about.hobby",
+                "about.favorite_color",
+                "about.food",
+                "about.weather",
+                "about.time",
+                "about.date",
+                "about.joke",
+                "about.fact",
+                "about.help",
+                "about.music",
+                "about.news",
+                "about.goodbye",
+                "greeting"
+              ],
+              "perceptrons": [
+                [
+                  -0.4285791516304016,
+                  1.4921176433563232,
+                  1.26099693775177,
+                  11.82591724395752,
+                  8.818549156188965,
+                  0.43554073572158813,
+                  0.60631263256073,
+                  4.347423553466797,
+                  0.3154197037220001,
+                  4.470852375030518,
+                  -2.3904409408569336,
+                  -2.323850393295288,
+                  -0.9894474744796753,
+                  -0.38861918449401855,
+                  -0.38861918449401855,
+                  -1.1490532159805298,
+                  -1.1490532159805298,
+                  -2.4013748168945312,
+                  -0.71409672498703,
+                  -0.5982425808906555,
+                  -0.0979691669344902,
+                  -0.276716411113739,
+                  -0.07908282428979874,
+                  -0.22465962171554565,
+                  -0.22138814628124237,
+                  -0.5103210210800171,
+                  -0.1474940925836563,
+                  -2.3884434700012207,
+                  -0.681943416595459,
+                  -0.681943416595459,
+                  -0.657177746295929,
+                  -0.6859880089759827,
+                  -0.3712686002254486,
+                  -0.722118079662323,
+                  -0.3107956647872925,
+                  -1.341427206993103,
+                  -1.7972602844238281,
+                  -0.880172073841095,
+                  -0.2319333404302597,
+                  -0.690580427646637,
+                  -0.16240209341049194,
+                  -0.7079205513000488,
+                  -0.9960039258003235,
+                  -0.012751933187246323,
+                  -0.5698760747909546,
+                  0,
+                  -0.6359363794326782,
+                  -0.5085339546203613,
+                  -0.11937116086483002,
+                  -0.5698760747909546,
+                  -0.14564087986946106,
+                  -0.2648563086986542,
+                  0,
+                  0,
+                  0,
+                  -0.08524590730667114,
+                  -0.08524590730667114,
+                  0,
+                  0,
+                  -0.04755745828151703,
+                  -0.04755745828151703,
+                  -0.04755745828151703,
+                  0,
+                  -0.5906556844711304,
+                  0,
+                  0,
+                  -0.22253182530403137,
+                  -0.22253182530403137,
+                  -0.10960953682661057,
+                  -0.10960953682661057,
+                  -0.07927489280700684,
+                  -0.07838337868452072,
+                  -0.3382677733898163,
+                  -0.3382677733898163,
+                  -0.06521699577569962,
+                  -0.06872057914733887,
+                  -0.06747574359178543,
+                  -0.06747370958328247,
+                  -0.021177632734179497,
+                  -0.018978405743837357,
+                  -0.016804564744234085,
+                  -0.06176323443651199,
+                  -0.060663290321826935,
+                  -0.03455910086631775,
+                  0.07127640076814366
+                ],
+                [
+                  0.23326478898525238,
+                  1.6340148448944092,
+                  -1.0606974363327026,
+                  -0.5175210237503052,
+                  -3.8395793437957764,
+                  7.825273036956787,
+                  1.3529725074768066,
+                  -3.8395793437957764,
+                  -0.8302251100540161,
+                  0,
+                  14.540230751037598,
+                  5.529473781585693,
+                  -0.41812753677368164,
+                  0.788844645023346,
+                  0.33082661032676697,
+                  -3.9012222290039062,
+                  -3.9012222290039062,
+                  -2.9588775634765625,
+                  -0.9254505634307861,
+                  -0.6172649264335632,
+                  -0.268635630607605,
+                  -0.2677881121635437,
+                  -0.2582261264324188,
+                  -0.2582261264324188,
+                  -5.4087724685668945,
+                  -4.721358299255371,
+                  -5.355617046356201,
+                  -1.1237866878509521,
+                  -0.08252984285354614,
+                  -0.08252984285354614,
+                  -0.035872895270586014,
+                  -0.017737073823809624,
+                  -0.017737073823809624,
+                  -0.07992571592330933,
+                  -0.07577987015247345,
+                  -5.503520965576172,
+                  -0.7639818787574768,
+                  -0.4313051700592041,
+                  -0.6917086839675903,
+                  -1.1140518188476562,
+                  -0.0020769801922142506,
+                  -0.25906118750572205,
+                  -0.004333226475864649,
+                  -0.41532382369041443,
+                  -0.29230979084968567,
+                  -0.6688254475593567,
+                  -0.3792979121208191,
+                  -0.16059158742427826,
+                  0,
+                  -0.29230979084968567,
+                  -0.6279661655426025,
+                  0,
+                  -0.05784211680293083,
+                  -0.05784211680293083,
+                  -0.03584311157464981,
+                  -0.09031985700130463,
+                  0,
+                  -0.03708241879940033,
+                  -0.03708241879940033,
+                  0,
+                  0,
+                  0,
+                  -0.34384655952453613,
+                  -0.057334285229444504,
+                  0,
+                  0,
+                  0,
+                  -0.09940724074840546,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.1468987911939621,
+                  -0.1468987911939621,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1.3111595816922168
+                ],
+                [
+                  -0.7865716814994812,
+                  0.6233311891555786,
+                  2.185866355895996,
+                  -1.520772099494934,
+                  -1.3765795230865479,
+                  1.919360637664795,
+                  1.3052624464035034,
+                  -1.3765795230865479,
+                  -1.0809612274169922,
+                  0,
+                  -1.9500432014465332,
+                  -2.7070250511169434,
+                  -1.6950693130493164,
+                  1.4056999683380127,
+                  -1.1895723342895508,
+                  4.28238582611084,
+                  7.267174243927002,
+                  12.768627166748047,
+                  -0.6716939806938171,
+                  -0.38652434945106506,
+                  -0.202317014336586,
+                  -0.21674242615699768,
+                  -0.21674242615699768,
+                  -0.21674242615699768,
+                  -0.1764356940984726,
+                  -1.020573377609253,
+                  -0.1179870218038559,
+                  -1.7474461793899536,
+                  -0.1605413258075714,
+                  -0.1605413258075714,
+                  -0.11498276889324188,
+                  -0.13732916116714478,
+                  -0.11498276889324188,
+                  -0.1280706226825714,
+                  -0.09891212731599808,
+                  -2.8153157234191895,
+                  -1.5933113098144531,
+                  -0.7399842739105225,
+                  -0.6565068364143372,
+                  -1.9787551164627075,
+                  0,
+                  -0.5852134227752686,
+                  -0.11212064325809479,
+                  -1.243499755859375,
+                  -1.1812443733215332,
+                  -0.7195632457733154,
+                  -0.2961374819278717,
+                  -0.00048114132368937135,
+                  0,
+                  -0.320058673620224,
+                  -0.599211573600769,
+                  -0.0017230914672836661,
+                  -0.113700270652771,
+                  -0.113700270652771,
+                  -0.1309899389743805,
+                  -0.2015252560377121,
+                  -0.0017230914672836661,
+                  -0.027475187554955482,
+                  -0.027475187554955482,
+                  0,
+                  0,
+                  -2.18910551071167,
+                  -0.22105440497398376,
+                  -0.21263864636421204,
+                  0,
+                  0,
+                  0,
+                  -0.008336213417351246,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.4175235331058502,
+                  -0.4175235331058502,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.5031514957533346
+                ],
+                [
+                  0.6131553649902344,
+                  -0.6840373873710632,
+                  -0.49908512830734253,
+                  0,
+                  -0.15950877964496613,
+                  -0.2732081115245819,
+                  0.43648236989974976,
+                  -0.13569778203964233,
+                  -0.13656872510910034,
+                  -0.01086069829761982,
+                  -0.08222148567438126,
+                  -0.9498674869537354,
+                  -0.7616146802902222,
+                  -0.8754540681838989,
+                  -1.4209762811660767,
+                  -0.19986961781978607,
+                  -0.049957357347011566,
+                  -0.050705961883068085,
+                  7.986349105834961,
+                  5.527921199798584,
+                  1.2454651594161987,
+                  2.2051010131835938,
+                  2.4583370685577393,
+                  2.106386184692383,
+                  -0.36445099115371704,
+                  -0.03820587694644928,
+                  -0.3547617793083191,
+                  -0.107109934091568,
+                  -0.3680356442928314,
+                  -0.3680356442928314,
+                  -0.3886704742908478,
+                  -0.27355024218559265,
+                  -0.24178482592105865,
+                  -0.5954927206039429,
+                  -0.33013343811035156,
+                  -0.025488356128335,
+                  -0.0877380445599556,
+                  -0.36958548426628113,
+                  -0.6831709742546082,
+                  -1.1840523481369019,
+                  -0.23522533476352692,
+                  0,
+                  -0.17666614055633545,
+                  -0.2665500044822693,
+                  -0.10429058969020844,
+                  -0.37300175428390503,
+                  -0.13481862843036652,
+                  -0.04503193125128746,
+                  0,
+                  -0.08926060795783997,
+                  -0.0854175016283989,
+                  -0.00007460495544364676,
+                  0,
+                  0,
+                  0,
+                  -0.11499082297086716,
+                  0,
+                  -0.11499082297086716,
+                  -0.11499082297086716,
+                  -0.008386335335671902,
+                  -0.008386335335671902,
+                  -0.1211509108543396,
+                  -0.1653864085674286,
+                  0,
+                  -0.2740708291530609,
+                  -0.2740708291530609,
+                  0,
+                  0,
+                  -0.3520362079143524,
+                  -0.3520362079143524,
+                  -0.0001876389142125845,
+                  -0.00017977382231038064,
+                  -0.17992201447486877,
+                  -0.17992201447486877,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.14716092698721464
+                ],
+                [
+                  -2.6202774047851562,
+                  1.3270962238311768,
+                  1.4336812496185303,
+                  -0.37486302852630615,
+                  -0.2296423763036728,
+                  -8.327621459960938,
+                  0.6333436369895935,
+                  -0.18312154710292816,
+                  -1.5697907209396362,
+                  -0.017705226317048073,
+                  -0.37180522084236145,
+                  7.642187118530273,
+                  -1.0181666612625122,
+                  -0.44418296217918396,
+                  -0.7294208407402039,
+                  -0.32947149872779846,
+                  -0.004749988205730915,
+                  -0.2353869527578354,
+                  -0.005380342714488506,
+                  -0.005380342714488506,
+                  -0.005380342714488506,
+                  -0.06626932322978973,
+                  0,
+                  0,
+                  5.899453639984131,
+                  3.7877516746520996,
+                  5.891684055328369,
+                  -0.5643782019615173,
+                  -0.2531757652759552,
+                  -0.2531757652759552,
+                  -0.36446112394332886,
+                  -0.3678893744945526,
+                  -0.2318902462720871,
+                  -0.28501659631729126,
+                  -0.09044907987117767,
+                  -0.10158582776784897,
+                  -0.743927538394928,
+                  -0.4842652976512909,
+                  -0.3998565971851349,
+                  -0.679248034954071,
+                  -0.06626932322978973,
+                  -0.2412687987089157,
+                  -0.22880995273590088,
+                  -0.46980711817741394,
+                  -0.3152778446674347,
+                  -0.15447847545146942,
+                  -0.07157491147518158,
+                  -0.019008956849575043,
+                  0,
+                  -0.01609250158071518,
+                  -0.12127865105867386,
+                  -0.08023244887590408,
+                  -0.03460156172513962,
+                  -0.03460156172513962,
+                  0,
+                  -0.09404505789279938,
+                  -0.024210119619965553,
+                  -0.054666150361299515,
+                  -0.054666150361299515,
+                  -0.14107008278369904,
+                  -0.14107008278369904,
+                  -0.1758359670639038,
+                  -0.08911065757274628,
+                  -0.07021140307188034,
+                  -0.1112784892320633,
+                  -0.1112784892320633,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.21349161863327026,
+                  -0.21254172921180725,
+                  -0.5114263296127319,
+                  -0.5114263296127319,
+                  -0.13587389886379242,
+                  -0.17017842829227448,
+                  -0.1613503396511078,
+                  -0.21356450021266937,
+                  -0.06488630175590515,
+                  -0.058195810765028,
+                  -0.05149995908141136,
+                  -0.12086556851863861,
+                  -0.11718897521495819,
+                  -0.1086309626698494,
+                  0.09717343426577955
+                ],
+                [
+                  4.071577548980713,
+                  -0.5161719918251038,
+                  0.3925847113132477,
+                  -2.6261093616485596,
+                  -1.5534307956695557,
+                  -1.6353545188903809,
+                  -0.6272801756858826,
+                  -0.055125199258327484,
+                  4.9770188331604,
+                  -1.4709135293960571,
+                  -2.614152669906616,
+                  -0.02728511579334736,
+                  7.090947151184082,
+                  -0.8616384863853455,
+                  -3.485365867614746,
+                  -0.8363044261932373,
+                  -0.0037502336781471968,
+                  -2.588261842727661,
+                  -3.6887102127075195,
+                  -3.370565891265869,
+                  -0.2000957876443863,
+                  -0.688769519329071,
+                  -0.31567108631134033,
+                  -0.4401451647281647,
+                  0,
+                  0,
+                  0,
+                  11.635202407836914,
+                  5.636641025543213,
+                  5.636641025543213,
+                  -1.412519931793213,
+                  -1.720170259475708,
+                  -0.8373377323150635,
+                  -3.739881992340088,
+                  -3.337677001953125,
+                  -1.5036860704421997,
+                  -2.4528167247772217,
+                  -1.41335129737854,
+                  -2.272456407546997,
+                  -1.5876688957214355,
+                  -0.3054888844490051,
+                  -0.929031491279602,
+                  -3.030019998550415,
+                  -0.24485856294631958,
+                  -1.1159803867340088,
+                  -0.36444661021232605,
+                  -1.3084090948104858,
+                  -0.9493129849433899,
+                  -0.20793798565864563,
+                  -1.1143674850463867,
+                  -0.6535860896110535,
+                  -0.8296882510185242,
+                  0,
+                  0,
+                  0,
+                  -0.44455939531326294,
+                  -0.2820638418197632,
+                  -0.12936246395111084,
+                  -0.12936246395111084,
+                  0,
+                  0,
+                  -0.8271910548210144,
+                  -1.621172547340393,
+                  -0.4428776204586029,
+                  -1.4281377792358398,
+                  -1.4281377792358398,
+                  -0.32026946544647217,
+                  -0.32026946544647217,
+                  -0.12057633697986603,
+                  -0.12057633697986603,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1.3245746144702581
+                ],
+                [
+                  3.8231825828552246,
+                  -4.8110857009887695,
+                  2.2664811611175537,
+                  -0.8442886471748352,
+                  -0.9154062867164612,
+                  3.36856746673584,
+                  -1.574264645576477,
+                  -0.8097801804542542,
+                  1.5288748741149902,
+                  -0.06901759654283524,
+                  -0.7754522562026978,
+                  -1.4064172506332397,
+                  -3.0875296592712402,
+                  -1.1341063976287842,
+                  -1.1425601243972778,
+                  -0.7694492936134338,
+                  -0.7694492936134338,
+                  -0.7347405552864075,
+                  -1.604528546333313,
+                  -1.604528546333313,
+                  0,
+                  -0.5799187421798706,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.6996859908103943,
+                  -0.04491231217980385,
+                  -0.04491231217980385,
+                  5.019672393798828,
+                  3.9048116207122803,
+                  5.976960182189941,
+                  3.2523272037506104,
+                  6.870858669281006,
+                  5.335477828979492,
+                  -2.0065743923187256,
+                  -2.025808095932007,
+                  -0.9586282968521118,
+                  -1.1835750341415405,
+                  -0.5799187421798706,
+                  -0.5225591659545898,
+                  -12.856860160827637,
+                  -0.5496893525123596,
+                  -0.05588720738887787,
+                  -0.01745034195482731,
+                  -0.07975649833679199,
+                  -0.07975649833679199,
+                  0,
+                  -0.05588720738887787,
+                  -1.5547478199005127,
+                  -2.055966854095459,
+                  -0.0042268563993275166,
+                  -0.0042268563993275166,
+                  -1.0527814626693726,
+                  -1.5635186433792114,
+                  -0.47617679834365845,
+                  0,
+                  0,
+                  -0.007139758672565222,
+                  -0.007139758672565222,
+                  -0.007139758672565222,
+                  0,
+                  -2.49247145652771,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.0013224318390712142,
+                  -0.0012669452698901296,
+                  0,
+                  0,
+                  -0.0012137866578996181,
+                  -0.0025627429131418467,
+                  -0.0024229215923696756,
+                  -0.004207768943160772,
+                  -0.0010673232609406114,
+                  -0.0009777576196938753,
+                  -0.0008733166614547372,
+                  -0.0009448729688301682,
+                  -0.0009052279638126493,
+                  -0.0019795033149421215,
+                  -0.5550011036791791
+                ],
+                [
+                  -0.3957889974117279,
+                  0.12130078673362732,
+                  0.970639169216156,
+                  -0.0978526771068573,
+                  -0.47020983695983887,
+                  -0.24704742431640625,
+                  -1.3162809610366821,
+                  -0.07898484915494919,
+                  0.018715454265475273,
+                  -0.3171766996383667,
+                  -0.10863982886075974,
+                  -0.3387441337108612,
+                  -0.9731047749519348,
+                  -0.4972612261772156,
+                  -0.6037715077400208,
+                  -0.21973580121994019,
+                  -0.03127446398139,
+                  -0.09179415553808212,
+                  -0.2818227708339691,
+                  -0.14385148882865906,
+                  -0.008991111069917679,
+                  1.8887665271759033,
+                  -0.11423395574092865,
+                  -0.11423395574092865,
+                  -0.017406735569238663,
+                  -0.17461758852005005,
+                  -0.012956958264112473,
+                  -0.08233977854251862,
+                  -0.22629471123218536,
+                  -0.22629471123218536,
+                  0.9052407741546631,
+                  -1.0423275232315063,
+                  -0.6012604236602783,
+                  0.49323561787605286,
+                  -0.6474945545196533,
+                  0,
+                  3.07413387298584,
+                  11.030106544494629,
+                  1.181449294090271,
+                  0.7588417530059814,
+                  2.014695167541504,
+                  -3.1723592281341553,
+                  -1.1539783477783203,
+                  -0.9313615560531616,
+                  -0.2910059094429016,
+                  -0.26255562901496887,
+                  -0.20947353541851044,
+                  -0.018506083637475967,
+                  -0.1158752590417862,
+                  -0.09246068447828293,
+                  -0.28215426206588745,
+                  -0.3731861114501953,
+                  0,
+                  0,
+                  0,
+                  -0.24564041197299957,
+                  -0.12921780347824097,
+                  -0.07039856165647507,
+                  -0.07039856165647507,
+                  -0.0072412034496665,
+                  -0.0072412034496665,
+                  -0.0072412034496665,
+                  0,
+                  -3.104231357574463,
+                  -0.12695308029651642,
+                  -0.12695308029651642,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.6048041512609841
+                ],
+                [
+                  -0.46826672554016113,
+                  0.06760179996490479,
+                  1.0511454343795776,
+                  -0.8382506370544434,
+                  -1.0237950086593628,
+                  -0.5649181008338928,
+                  -0.1884109228849411,
+                  -0.1073201596736908,
+                  1.1628391742706299,
+                  -0.8095738291740417,
+                  -0.8566429018974304,
+                  -0.7553679347038269,
+                  -1.3326330184936523,
+                  -0.3283312916755676,
+                  -0.3879474103450775,
+                  -0.15855827927589417,
+                  -0.09808117151260376,
+                  -0.7534700632095337,
+                  -0.9577223658561707,
+                  -0.9318718910217285,
+                  -0.018577896058559418,
+                  -0.11849411576986313,
+                  -0.012788684107363224,
+                  -0.021790575236082077,
+                  -0.08023928105831146,
+                  -0.3945232033729553,
+                  -0.06221873685717583,
+                  -0.6082584857940674,
+                  -0.832233726978302,
+                  -0.832233726978302,
+                  -1.2431316375732422,
+                  -1.0655075311660767,
+                  -0.21426177024841309,
+                  -0.782828152179718,
+                  0.8095828890800476,
+                  -0.031983111053705215,
+                  3.59578013420105,
+                  -3.9593989849090576,
+                  -1.0463321208953857,
+                  -0.8721285462379456,
+                  -0.09371603280305862,
+                  10.234675407409668,
+                  13.725522994995117,
+                  -0.5094624757766724,
+                  -0.40500256419181824,
+                  -0.08597476035356522,
+                  -0.3896414041519165,
+                  -0.2557973265647888,
+                  -0.08717899769544601,
+                  -0.33615586161613464,
+                  -0.3921244144439697,
+                  -0.7996046543121338,
+                  0,
+                  0,
+                  0,
+                  -0.35921382904052734,
+                  -0.3296954035758972,
+                  -0.0072607542388141155,
+                  -0.0072607542388141155,
+                  -0.06893140822649002,
+                  -0.06893140822649002,
+                  -0.06893140822649002,
+                  -0.008461346849799156,
+                  -3.950266122817993,
+                  -0.0011902479454874992,
+                  -0.0011902479454874992,
+                  -0.023845592513680458,
+                  -0.023845592513680458,
+                  -0.0026075488422065973,
+                  -0.0026075488422065973,
+                  -0.03540966287255287,
+                  -0.03406843915581703,
+                  -0.1511349081993103,
+                  -0.1511349081993103,
+                  -0.01503964327275753,
+                  -0.028779733926057816,
+                  -0.027108624577522278,
+                  -0.042942825704813004,
+                  -0.012151862494647503,
+                  -0.010936939157545567,
+                  -0.00968423206359148,
+                  -0.011958034709095955,
+                  -0.011468181386590004,
+                  -0.021418577060103416,
+                  -0.23941736224791474
+                ],
+                [
+                  -1.2251988649368286,
+                  0.7754616141319275,
+                  -0.9002187848091125,
+                  -0.0775958001613617,
+                  -0.16947901248931885,
+                  -0.46086156368255615,
+                  -1.3303728103637695,
+                  -0.06681033968925476,
+                  -0.9413684010505676,
+                  -0.0692635029554367,
+                  -0.22550882399082184,
+                  -0.22413377463817596,
+                  0.13897325098514557,
+                  0.5196352005004883,
+                  0.17175137996673584,
+                  1.482027292251587,
+                  -0.20448705554008484,
+                  -0.1684289574623108,
+                  -0.14331422746181488,
+                  -0.07572243362665176,
+                  -0.04925541579723358,
+                  -0.8243690133094788,
+                  -0.03855292126536369,
+                  -0.7198385000228882,
+                  -0.009947340004146099,
+                  -0.07042205333709717,
+                  -0.0028623477555811405,
+                  -0.006781138014048338,
+                  -0.002316645812243223,
+                  -0.002316645812243223,
+                  0,
+                  0,
+                  0,
+                  2.4613258838653564,
+                  0,
+                  -0.12216051667928696,
+                  0,
+                  -0.747282087802887,
+                  0,
+                  2.2035629749298096,
+                  -0.747282087802887,
+                  0,
+                  0,
+                  10.431880950927734,
+                  -0.24532614648342133,
+                  2.4679994583129883,
+                  -3.7818896770477295,
+                  -0.18692898750305176,
+                  -0.6489611268043518,
+                  -2.2676191329956055,
+                  0,
+                  0,
+                  -0.025097070261836052,
+                  -0.025097070261836052,
+                  -0.12216051667928696,
+                  -0.12216051667928696,
+                  0,
+                  0,
+                  0,
+                  -0.00011417179484851658,
+                  -0.00011417179484851658,
+                  -0.30823421478271484,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.8657598495483398,
+                  -1.348258376121521,
+                  -0.64288330078125,
+                  -0.64288330078125,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.3577084311139454
+                ],
+                [
+                  0.3055628538131714,
+                  0.4668647050857544,
+                  -1.4250603914260864,
+                  -0.2924598455429077,
+                  0,
+                  0,
+                  -0.1795942336320877,
+                  0,
+                  -0.4325065016746521,
+                  0,
+                  -0.22271016240119934,
+                  0,
+                  0.1529882848262787,
+                  0.6923019289970398,
+                  -0.08677105605602264,
+                  -0.17160646617412567,
+                  0,
+                  -0.15547843277454376,
+                  -0.06315906345844269,
+                  -0.06315906345844269,
+                  -0.013973463326692581,
+                  -0.09043236821889877,
+                  0,
+                  -0.8260515332221985,
+                  0,
+                  0,
+                  0,
+                  -0.10251285135746002,
+                  0,
+                  0,
+                  0,
+                  -0.12431827932596207,
+                  0,
+                  -0.5468542575836182,
+                  0,
+                  -0.21881651878356934,
+                  -0.47493916749954224,
+                  -0.09043236821889877,
+                  -0.6037226915359497,
+                  0.5574854016304016,
+                  -0.09043236821889877,
+                  0,
+                  0,
+                  -3.3888168334960938,
+                  -1.5476738214492798,
+                  2.498234510421753,
+                  10.761529922485352,
+                  2.9551069736480713,
+                  2.376316547393799,
+                  -1.5440605878829956,
+                  -0.4588720202445984,
+                  -0.12431827932596207,
+                  -0.13354997336864471,
+                  -0.13354997336864471,
+                  -0.21881651878356934,
+                  -0.443773090839386,
+                  -0.030721789225935936,
+                  -0.11201611161231995,
+                  -0.11201611161231995,
+                  -0.060606323182582855,
+                  -0.060606323182582855,
+                  -0.2546800374984741,
+                  -0.22291240096092224,
+                  -0.4873473644256592,
+                  -0.025671742856502533,
+                  -0.025671742856502533,
+                  -0.9601210951805115,
+                  -1.5380836725234985,
+                  -0.8260515332221985,
+                  -0.8260515332221985,
+                  -0.020098896697163582,
+                  -0.01930510811507702,
+                  -0.005422166083008051,
+                  -0.005422166083008051,
+                  -0.009613019414246082,
+                  -0.014003712683916092,
+                  -0.013217044062912464,
+                  -0.02200750634074211,
+                  -0.005869969725608826,
+                  -0.005333014763891697,
+                  -0.004744383972138166,
+                  -0.007647280115634203,
+                  -0.007340142969042063,
+                  -0.010632880963385105,
+                  -0.17554680784238536
+                ],
+                [
+                  1.4817922115325928,
+                  -0.18138320744037628,
+                  -0.9230952262878418,
+                  -0.19884978234767914,
+                  0,
+                  0,
+                  -0.27580130100250244,
+                  0,
+                  -0.8973828554153442,
+                  0,
+                  -0.1979799121618271,
+                  0,
+                  0.19684050977230072,
+                  1.1661330461502075,
+                  0.20676016807556152,
+                  -2.4026386737823486,
+                  0,
+                  -0.11876412481069565,
+                  -0.08186358958482742,
+                  -0.08186358958482742,
+                  -0.0001338702131761238,
+                  -0.07595446705818176,
+                  0,
+                  -0.5886332988739014,
+                  0,
+                  0,
+                  0,
+                  -0.03964428976178169,
+                  0,
+                  0,
+                  0,
+                  -0.1495753675699234,
+                  0,
+                  -0.4144393503665924,
+                  0,
+                  -0.24624574184417725,
+                  -0.23243668675422668,
+                  -0.07595446705818176,
+                  -0.6459872126579285,
+                  0.011780129745602608,
+                  -0.07595446705818176,
+                  0,
+                  0,
+                  -2.5734899044036865,
+                  5.65365743637085,
+                  -0.3510470688343048,
+                  -0.6270943284034729,
+                  -0.16061103343963623,
+                  -0.19416700303554535,
+                  7.837131977081299,
+                  -0.4577125608921051,
+                  -0.1495753675699234,
+                  -0.12946312129497528,
+                  -0.12946312129497528,
+                  -0.24624574184417725,
+                  -0.572533130645752,
+                  -0.050411056727170944,
+                  -0.15634110569953918,
+                  -0.15634110569953918,
+                  -0.05109100788831711,
+                  -0.05109100788831711,
+                  -0.23336684703826904,
+                  -0.271472692489624,
+                  -0.26812317967414856,
+                  -0.05017527565360069,
+                  -0.05017527565360069,
+                  -0.5999088883399963,
+                  -1.3135316371917725,
+                  -0.5886332988739014,
+                  -0.5886332988739014,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.5121479523266954
+                ],
+                [
+                  -0.22915910184383392,
+                  -0.1396677941083908,
+                  -1.4799315929412842,
+                  -0.002198272617533803,
+                  -0.2796681225299835,
+                  -0.06834358721971512,
+                  -1.0738791227340698,
+                  -0.034695614129304886,
+                  0.6117635369300842,
+                  -0.22653140127658844,
+                  -0.7434660792350769,
+                  -0.024831043556332588,
+                  -1.499680757522583,
+                  0.914824366569519,
+                  3.4123382568359375,
+                  -0.7577621936798096,
+                  -0.0009150562691502273,
+                  -0.6169542074203491,
+                  -0.05642402544617653,
+                  -0.05642402544617653,
+                  0,
+                  0,
+                  0,
+                  -0.011601756326854229,
+                  -0.002079071942716837,
+                  0,
+                  -0.0008910961914807558,
+                  0,
+                  -0.10430718213319778,
+                  -0.10430718213319778,
+                  -1.3761988878250122,
+                  2.1883394718170166,
+                  -0.7130740284919739,
+                  -0.43063783645629883,
+                  -0.005039274226874113,
+                  -0.8387887477874756,
+                  -0.7216586470603943,
+                  -0.6485188603401184,
+                  2.897538900375366,
+                  -1.6586228609085083,
+                  0,
+                  0,
+                  -0.008415051735937595,
+                  -0.24615029990673065,
+                  -0.2109413892030716,
+                  -0.368753582239151,
+                  -0.11103705316781998,
+                  -0.00021823194401804358,
+                  0,
+                  -0.2109413892030716,
+                  9.350044250488281,
+                  2.916010856628418,
+                  5.291030406951904,
+                  5.291030406951904,
+                  -0.8387887477874756,
+                  -3.2663094997406006,
+                  -1.6600532531738281,
+                  -0.6178900599479675,
+                  -0.6178900599479675,
+                  -0.13383182883262634,
+                  -0.13383182883262634,
+                  -0.9363607168197632,
+                  -1.2061033248901367,
+                  -0.4930194616317749,
+                  -0.4631447196006775,
+                  -0.4631447196006775,
+                  -0.031969692558050156,
+                  -0.9949614405632019,
+                  -0.011601756326854229,
+                  -0.011601756326854229,
+                  -0.3561098575592041,
+                  -0.35173502564430237,
+                  -0.07878337800502777,
+                  -0.07878337800502777,
+                  -0.2838253676891327,
+                  -0.3017078638076782,
+                  -0.29561859369277954,
+                  -0.3209955394268036,
+                  -0.10330431163311005,
+                  -0.10033092647790909,
+                  -0.0895584300160408,
+                  -0.26946479082107544,
+                  -0.2649800181388855,
+                  -0.15988099575042725,
+                  0.286922963614817
+                ],
+                [
+                  -0.544104278087616,
+                  -0.0895276740193367,
+                  -0.9478330612182617,
+                  0,
+                  -0.31358176469802856,
+                  -0.4640634059906006,
+                  -1.0852015018463135,
+                  -0.08177095651626587,
+                  0.18296921253204346,
+                  -0.19331011176109314,
+                  -0.32987791299819946,
+                  -0.07915085554122925,
+                  -0.9038655757904053,
+                  0.4610618054866791,
+                  1.3193808794021606,
+                  -0.5127866864204407,
+                  -0.00813520047813654,
+                  -0.23387674987316132,
+                  -0.09700817614793777,
+                  -0.09700817614793777,
+                  -0.0006246099364943802,
+                  0,
+                  0,
+                  -0.00393652031198144,
+                  -0.006629192270338535,
+                  0,
+                  -0.004506062250584364,
+                  0,
+                  -0.1114189475774765,
+                  -0.1114189475774765,
+                  -0.7332193851470947,
+                  1.4221271276474,
+                  -0.46652743220329285,
+                  -0.36245039105415344,
+                  -0.0056205084547400475,
+                  2.001204013824463,
+                  -0.2823132872581482,
+                  -0.21688327193260193,
+                  1.4094836711883545,
+                  -0.7075180411338806,
+                  0,
+                  0,
+                  -0.01627545990049839,
+                  -0.0764104425907135,
+                  -0.005567250773310661,
+                  -0.10054948925971985,
+                  -0.010742832906544209,
+                  0,
+                  0,
+                  -0.005567250773310661,
+                  -2.157377004623413,
+                  1.9445552825927734,
+                  -0.5642229914665222,
+                  -0.5642229914665222,
+                  2.278674602508545,
+                  8.52351188659668,
+                  3.584955930709839,
+                  2.6592366695404053,
+                  2.6592366695404053,
+                  -0.09875913709402084,
+                  -0.09875913709402084,
+                  -0.6380304098129272,
+                  -0.48411664366722107,
+                  -0.399434357881546,
+                  -0.3853151500225067,
+                  -0.3853151500225067,
+                  -0.01828743889927864,
+                  -0.44481852650642395,
+                  -0.00393652031198144,
+                  -0.00393652031198144,
+                  -0.09245355427265167,
+                  -0.0888468474149704,
+                  -0.1159033477306366,
+                  -0.1159033477306366,
+                  -0.04588848724961281,
+                  -0.0666489377617836,
+                  -0.06286093592643738,
+                  -0.10306307673454285,
+                  -0.028002452105283737,
+                  -0.025362089276313782,
+                  -0.022525759413838387,
+                  -0.03678692504763603,
+                  -0.03531424701213837,
+                  -0.05026885122060776,
+                  -0.2955108042635496
+                ],
+                [
+                  -1.1849722862243652,
+                  -0.3117031753063202,
+                  -1.8210088014602661,
+                  0,
+                  -0.320902943611145,
+                  -1.2570314407348633,
+                  0.2094271183013916,
+                  -0.135583758354187,
+                  -1.5031183958053589,
+                  -0.12129060924053192,
+                  -0.8902226090431213,
+                  -0.24363091588020325,
+                  2.4207217693328857,
+                  -3.7245676517486572,
+                  3.615183115005493,
+                  1.5540724992752075,
+                  -0.8635578751564026,
+                  -0.7634571194648743,
+                  -1.2228411436080933,
+                  -0.7348217368125916,
+                  -0.7348217368125916,
+                  -0.48782628774642944,
+                  -0.48782628774642944,
+                  -0.494798868894577,
+                  -0.029681529849767685,
+                  0,
+                  -0.028227200731635094,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.27753356099128723,
+                  0,
+                  0,
+                  -0.07702820003032684,
+                  0,
+                  -2.346100091934204,
+                  -1.9897700548171997,
+                  0,
+                  0,
+                  0,
+                  -0.3417816460132599,
+                  -0.3676510751247406,
+                  -0.39802342653274536,
+                  -0.19423800706863403,
+                  0,
+                  0,
+                  -0.22184358537197113,
+                  -0.2328590750694275,
+                  0,
+                  -1.8342022895812988,
+                  -1.8342022895812988,
+                  0,
+                  -1.3176779747009277,
+                  0,
+                  -1.3176779747009277,
+                  -1.3176779747009277,
+                  3.8805782794952393,
+                  3.8805782794952393,
+                  6.446707725524902,
+                  7.9240312576293945,
+                  -0.3923424780368805,
+                  -0.6801653504371643,
+                  -0.6801653504371643,
+                  -0.030197083950042725,
+                  -1.1090580224990845,
+                  -0.0034863476175814867,
+                  -0.0034863476175814867,
+                  -0.28523337841033936,
+                  -0.2760153114795685,
+                  -0.3669312298297882,
+                  -0.3669312298297882,
+                  -0.16576623916625977,
+                  -0.21738043427467346,
+                  -0.21181248128414154,
+                  -0.28798171877861023,
+                  -0.09297150373458862,
+                  -0.0832657590508461,
+                  -0.07377392798662186,
+                  -0.14055179059505463,
+                  -0.13556239008903503,
+                  -0.1431882232427597,
+                  0.06554591786182337
+                ],
+                [
+                  -1.4529081583023071,
+                  0.8140937089920044,
+                  1.0895196199417114,
+                  -0.3329485058784485,
+                  -0.7745729088783264,
+                  -0.7843406200408936,
+                  0.2814985513687134,
+                  -0.19994495809078217,
+                  -0.547370433807373,
+                  -0.47326910495758057,
+                  -0.6281368732452393,
+                  -1.1826850175857544,
+                  1.4909707307815552,
+                  -1.437514305114746,
+                  -2.088341474533081,
+                  -0.18727150559425354,
+                  -0.18727150559425354,
+                  -0.5908595323562622,
+                  -0.9438663125038147,
+                  -0.6389374136924744,
+                  -0.34144461154937744,
+                  -0.5904646515846252,
+                  -0.24481725692749023,
+                  -0.3113711476325989,
+                  -0.12642477452754974,
+                  -0.6185479760169983,
+                  -0.09035953134298325,
+                  -0.36098724603652954,
+                  -0.3833109438419342,
+                  -0.3833109438419342,
+                  -1.9304333925247192,
+                  -0.18948990106582642,
+                  -0.18948990106582642,
+                  2.868319034576416,
+                  -1.6933412551879883,
+                  0,
+                  1.992273211479187,
+                  -2.3044745922088623,
+                  2.3010618686676025,
+                  -1.5417094230651855,
+                  -0.28446587920188904,
+                  -2.2481911182403564,
+                  -0.35309648513793945,
+                  -0.6985427737236023,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.4964320659637451,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.6471360325813293,
+                  0,
+                  -0.6471360325813293,
+                  -0.6471360325813293,
+                  0,
+                  0,
+                  0,
+                  0,
+                  11.828200340270996,
+                  5.155026912689209,
+                  5.155026912689209,
+                  -0.05326111987233162,
+                  -0.32649239897727966,
+                  -0.03435038775205612,
+                  -0.03435038775205612,
+                  -0.2024918645620346,
+                  -0.19537699222564697,
+                  -0.39817240834236145,
+                  -0.39817240834236145,
+                  -0.10614807903766632,
+                  -0.1584068089723587,
+                  -0.14990326762199402,
+                  -0.20609569549560547,
+                  -0.0645224004983902,
+                  -0.05785779654979706,
+                  -0.05123196542263031,
+                  -0.08776300400495529,
+                  -0.08440274745225906,
+                  -0.10541985929012299,
+                  -0.10580420658030606
+                ],
+                [
+                  0.20294833183288574,
+                  0.05278666317462921,
+                  -1.9547853469848633,
+                  -0.26651278138160706,
+                  -0.14515529572963715,
+                  -0.24443760514259338,
+                  -0.488878458738327,
+                  -0.05913660302758217,
+                  -0.7708273530006409,
+                  -0.05645039677619934,
+                  -0.5772651433944702,
+                  -0.07518363744020462,
+                  0.5302239656448364,
+                  1.150816798210144,
+                  1.0123131275177002,
+                  -0.5935661196708679,
+                  -0.03069595992565155,
+                  -0.5255721807479858,
+                  -0.8721224665641785,
+                  -0.23136477172374725,
+                  -0.07025732845067978,
+                  -0.8639385104179382,
+                  -0.592413067817688,
+                  3.2206532955169678,
+                  0,
+                  0,
+                  0,
+                  -0.16434168815612793,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1.7109417915344238,
+                  -0.014857872389256954,
+                  -0.4053894877433777,
+                  -0.153090700507164,
+                  -0.3241652250289917,
+                  -0.6228613257408142,
+                  4.091839790344238,
+                  -0.1980620175600052,
+                  -0.04649486020207405,
+                  0,
+                  -3.033574104309082,
+                  -2.9666922092437744,
+                  -2.3489861488342285,
+                  -2.9833083152770996,
+                  -0.09466720372438431,
+                  -1.4581208229064941,
+                  -2.364670991897583,
+                  -0.6228613257408142,
+                  0,
+                  -0.054692693054676056,
+                  -0.054692693054676056,
+                  -0.4053894877433777,
+                  -0.4053894877433777,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.08094646036624908,
+                  0,
+                  0,
+                  0,
+                  2.139986515045166,
+                  8.810478210449219,
+                  3.811917543411255,
+                  3.811917543411255,
+                  -0.09564057737588882,
+                  -0.09171468019485474,
+                  -0.11075253784656525,
+                  -0.11075253784656525,
+                  -0.06394468247890472,
+                  -0.08953318744897842,
+                  -0.08464832603931427,
+                  -0.14700457453727722,
+                  -0.03728850185871124,
+                  -0.03415939584374428,
+                  -0.03051059879362583,
+                  -0.05023203045129776,
+                  -0.04818248003721237,
+                  -0.06915685534477234,
+                  -0.9304157603981059
+                ],
+                [
+                  -1.1564559936523438,
+                  -1.2178009748458862,
+                  -0.7700884938240051,
+                  -0.20175187289714813,
+                  -0.8697485327720642,
+                  -1.40132474899292,
+                  -0.2814787030220032,
+                  -0.4482434093952179,
+                  -2.054003953933716,
+                  -0.3670266568660736,
+                  -0.31828829646110535,
+                  -1.8532081842422485,
+                  -1.3086100816726685,
+                  -0.6269699335098267,
+                  -1.3718035221099854,
+                  -0.7171859741210938,
+                  -0.47292205691337585,
+                  -0.16509488224983215,
+                  -0.7534022331237793,
+                  -0.4743352234363556,
+                  -0.31729063391685486,
+                  -0.2863837778568268,
+                  -0.24171756207942963,
+                  -0.24171756207942963,
+                  -0.719163715839386,
+                  0,
+                  -0.6809840798377991,
+                  -0.007576528936624527,
+                  -0.33945199847221375,
+                  -0.33945199847221375,
+                  -0.3054174780845642,
+                  -0.31270742416381836,
+                  -0.19293400645256042,
+                  -0.276569664478302,
+                  -0.006669843103736639,
+                  -0.2985815703868866,
+                  -0.09784277528524399,
+                  -0.1382254660129547,
+                  -0.4668560326099396,
+                  -0.41006889939308167,
+                  -0.03034921921789646,
+                  0,
+                  -0.5004658699035645,
+                  -0.29851803183555603,
+                  -0.3680669665336609,
+                  0,
+                  -0.2774462401866913,
+                  -0.243071049451828,
+                  -0.02908245660364628,
+                  -0.14139223098754883,
+                  -0.10078620910644531,
+                  -0.10948404669761658,
+                  -0.7283884286880493,
+                  -0.7283884286880493,
+                  -0.2985815703868866,
+                  -0.30725952982902527,
+                  -0.006076553836464882,
+                  0,
+                  0,
+                  -0.9396276473999023,
+                  -0.9396276473999023,
+                  -0.9396276473999023,
+                  -0.004894698970019817,
+                  -0.15391182899475098,
+                  -0.356965035200119,
+                  -0.356965035200119,
+                  -0.03701367601752281,
+                  -0.03701367601752281,
+                  0,
+                  0,
+                  11.180682182312012,
+                  11.162115097045898,
+                  5.912088394165039,
+                  5.912088394165039,
+                  -2.2875585556030273,
+                  -2.367048740386963,
+                  -2.3191208839416504,
+                  -2.1250252723693848,
+                  -0.7487254738807678,
+                  -0.6986658573150635,
+                  -0.657463014125824,
+                  -2.138641119003296,
+                  -2.0938880443573,
+                  -0.9789374470710754,
+                  2.684175553484161
+                ],
+                [
+                  -2.4801528453826904,
+                  -3.1471407413482666,
+                  -1.8698019981384277,
+                  -0.4290001094341278,
+                  -0.9460514187812805,
+                  -1.3916758298873901,
+                  -5.095547199249268,
+                  -0.43750372529029846,
+                  -1.3872215747833252,
+                  -0.3905705511569977,
+                  -0.44188687205314636,
+                  -1.400774598121643,
+                  -1.0186350345611572,
+                  -1.119773507118225,
+                  -2.9585494995117188,
+                  -0.9282919764518738,
+                  -0.2603241205215454,
+                  -0.2792266309261322,
+                  -0.6148654222488403,
+                  -0.3468822240829468,
+                  -0.24520091712474823,
+                  -0.2109382301568985,
+                  -0.1859564334154129,
+                  -0.1859564334154129,
+                  -0.35015392303466797,
+                  -0.2971983850002289,
+                  -0.2760240435600281,
+                  -0.03146553039550781,
+                  -0.22615967690944672,
+                  -0.22615967690944672,
+                  -0.25390344858169556,
+                  -0.19646033644676208,
+                  -0.13764917850494385,
+                  -0.2330746203660965,
+                  0,
+                  -0.9580093026161194,
+                  -0.087910495698452,
+                  -0.10883569717407227,
+                  -0.2623218894004822,
+                  -0.9722127318382263,
+                  -0.010571044869720936,
+                  0,
+                  -0.22031067311763763,
+                  -0.8203899264335632,
+                  -0.8426888585090637,
+                  0,
+                  -0.5796942114830017,
+                  -0.49867019057273865,
+                  -0.05911259725689888,
+                  -0.2383391261100769,
+                  -0.03496363386511803,
+                  -0.03496363386511803,
+                  -1.833275556564331,
+                  -1.833275556564331,
+                  -0.8291875123977661,
+                  -0.8291875123977661,
+                  0,
+                  0,
+                  0,
+                  -2.204737663269043,
+                  -2.204737663269043,
+                  -2.204737663269043,
+                  0,
+                  -0.00044921625521965325,
+                  -0.159403458237648,
+                  -0.159403458237648,
+                  -0.04697057232260704,
+                  -0.04697057232260704,
+                  0,
+                  0,
+                  -6.104311943054199,
+                  -6.049936771392822,
+                  -0.7284127473831177,
+                  -0.7284127473831177,
+                  6.658441543579102,
+                  6.530209541320801,
+                  6.527253150939941,
+                  5.7682881355285645,
+                  1.9863853454589844,
+                  1.9334964752197266,
+                  1.8791768550872803,
+                  6.560783863067627,
+                  6.443755626678467,
+                  1.5544841289520264,
+                  6.6426889456333
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "what is your village?"
+      ],
+      [
+        "en",
+        "where are you from?"
+      ],
+      [
+        "en",
+        "where do you live?"
+      ],
+      [
+        "en",
+        "what is your name?"
+      ],
+      [
+        "en",
+        "who are you?"
+      ],
+      [
+        "en",
+        "can you tell me your name?"
+      ],
+      [
+        "en",
+        "how old are you?"
+      ],
+      [
+        "en",
+        "what is your age?"
+      ],
+      [
+        "en",
+        "can you tell me your age?"
+      ],
+      [
+        "en",
+        "what languages do you speak?"
+      ],
+      [
+        "en",
+        "can you speak other languages?"
+      ],
+      [
+        "en",
+        "which languages can you communicate in?"
+      ],
+      [
+        "en",
+        "who created you?"
+      ],
+      [
+        "en",
+        "who is your developer?"
+      ],
+      [
+        "en",
+        "who made you?"
+      ],
+      [
+        "en",
+        "what is your purpose?"
+      ],
+      [
+        "en",
+        "why do you exist?"
+      ],
+      [
+        "en",
+        "what can you do?"
+      ],
+      [
+        "en",
+        "do you have any hobbies?"
+      ],
+      [
+        "en",
+        "what do you like to do?"
+      ],
+      [
+        "en",
+        "what are your interests?"
+      ],
+      [
+        "en",
+        "what is your favorite color?"
+      ],
+      [
+        "en",
+        "do you have a favorite color?"
+      ],
+      [
+        "en",
+        "which color do you like the most?"
+      ],
+      [
+        "en",
+        "what is your favorite food?"
+      ],
+      [
+        "en",
+        "do you eat?"
+      ],
+      [
+        "en",
+        "what do you like to eat?"
+      ],
+      [
+        "en",
+        "what's the weather like?"
+      ],
+      [
+        "en",
+        "how's the weather today?"
+      ],
+      [
+        "en",
+        "can you tell me the current weather?"
+      ],
+      [
+        "en",
+        "what is your village?"
+      ],
+      [
+        "en",
+        "where are you from?"
+      ],
+      [
+        "en",
+        "where do you live?"
+      ],
+      [
+        "en",
+        "what is your name?"
+      ],
+      [
+        "en",
+        "who are you?"
+      ],
+      [
+        "en",
+        "can you tell me your name?"
+      ],
+      [
+        "en",
+        "how old are you?"
+      ],
+      [
+        "en",
+        "what is your age?"
+      ],
+      [
+        "en",
+        "can you tell me your age?"
+      ],
+      [
+        "en",
+        "what languages do you speak?"
+      ],
+      [
+        "en",
+        "can you speak other languages?"
+      ],
+      [
+        "en",
+        "which languages can you communicate in?"
+      ],
+      [
+        "en",
+        "who created you?"
+      ],
+      [
+        "en",
+        "who is your developer?"
+      ],
+      [
+        "en",
+        "who made you?"
+      ],
+      [
+        "en",
+        "what is your purpose?"
+      ],
+      [
+        "en",
+        "why do you exist?"
+      ],
+      [
+        "en",
+        "what can you do?"
+      ],
+      [
+        "en",
+        "do you have any hobbies?"
+      ],
+      [
+        "en",
+        "what do you like to do?"
+      ],
+      [
+        "en",
+        "what are your interests?"
+      ],
+      [
+        "en",
+        "what is your favorite color?"
+      ],
+      [
+        "en",
+        "do you have a favorite color?"
+      ],
+      [
+        "en",
+        "which color do you like the most?"
+      ],
+      [
+        "en",
+        "what is your favorite food?"
+      ],
+      [
+        "en",
+        "do you eat?"
+      ],
+      [
+        "en",
+        "what do you like to eat?"
+      ],
+      [
+        "en",
+        "what's the weather like?"
+      ],
+      [
+        "en",
+        "how's the weather today?"
+      ],
+      [
+        "en",
+        "can you tell me the current weather?"
+      ],
+      [
+        "en",
+        "what time is it?"
+      ],
+      [
+        "en",
+        "can you tell me the current time?"
+      ],
+      [
+        "en",
+        "what's the time now?"
+      ],
+      [
+        "en",
+        "what is today's date?"
+      ],
+      [
+        "en",
+        "can you tell me the date today?"
+      ],
+      [
+        "en",
+        "what's the date today?"
+      ],
+      [
+        "en",
+        "can you tell me a joke?"
+      ],
+      [
+        "en",
+        "do you know any jokes?"
+      ],
+      [
+        "en",
+        "make me laugh."
+      ],
+      [
+        "en",
+        "tell me an interesting fact."
+      ],
+      [
+        "en",
+        "do you know any fun facts?"
+      ],
+      [
+        "en",
+        "can you share a fact with me?"
+      ],
+      [
+        "en",
+        "I need help."
+      ],
+      [
+        "en",
+        "can you assist me?"
+      ],
+      [
+        "en",
+        "how can you help me?"
+      ],
+      [
+        "en",
+        "what's your favorite music?"
+      ],
+      [
+        "en",
+        "do you like music?"
+      ],
+      [
+        "en",
+        "can you recommend a song?"
+      ],
+      [
+        "en",
+        "what's the latest news?"
+      ],
+      [
+        "en",
+        "can you tell me the news?"
+      ],
+      [
+        "en",
+        "what's happening in the world?"
+      ],
+      [
+        "en",
+        "bye"
+      ],
+      [
+        "en",
+        "goodbye"
+      ],
+      [
+        "en",
+        "see you later"
+      ],
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "hey"
+      ],
+      [
+        "en",
+        "good morning"
+      ],
+      [
+        "en",
+        "good afternoon"
+      ],
+      [
+        "en",
+        "good evening"
+      ],
+      [
+        "en",
+        "howdy"
+      ],
+      [
+        "en",
+        "greetings"
+      ],
+      [
+        "en",
+        "hi there"
+      ],
+      [
+        "en",
+        "hey there"
+      ],
+      [
+        "en",
+        "what is your village?"
+      ],
+      [
+        "en",
+        "where are you from?"
+      ],
+      [
+        "en",
+        "where do you live?"
+      ],
+      [
+        "en",
+        "what is your name?"
+      ],
+      [
+        "en",
+        "who are you?"
+      ],
+      [
+        "en",
+        "can you tell me your name?"
+      ],
+      [
+        "en",
+        "how old are you?"
+      ],
+      [
+        "en",
+        "what is your age?"
+      ],
+      [
+        "en",
+        "can you tell me your age?"
+      ],
+      [
+        "en",
+        "what languages do you speak?"
+      ],
+      [
+        "en",
+        "can you speak other languages?"
+      ],
+      [
+        "en",
+        "which languages can you communicate in?"
+      ],
+      [
+        "en",
+        "who created you?"
+      ],
+      [
+        "en",
+        "who is your developer?"
+      ],
+      [
+        "en",
+        "who made you?"
+      ],
+      [
+        "en",
+        "what is your purpose?"
+      ],
+      [
+        "en",
+        "why do you exist?"
+      ],
+      [
+        "en",
+        "what can you do?"
+      ],
+      [
+        "en",
+        "do you have any hobbies?"
+      ],
+      [
+        "en",
+        "what do you like to do?"
+      ],
+      [
+        "en",
+        "what are your interests?"
+      ],
+      [
+        "en",
+        "what is your favorite color?"
+      ],
+      [
+        "en",
+        "do you have a favorite color?"
+      ],
+      [
+        "en",
+        "which color do you like the most?"
+      ],
+      [
+        "en",
+        "what is your favorite food?"
+      ],
+      [
+        "en",
+        "do you eat?"
+      ],
+      [
+        "en",
+        "what do you like to eat?"
+      ],
+      [
+        "en",
+        "what's the weather like?"
+      ],
+      [
+        "en",
+        "how's the weather today?"
+      ],
+      [
+        "en",
+        "can you tell me the current weather?"
+      ],
+      [
+        "en",
+        "what time is it?"
+      ],
+      [
+        "en",
+        "can you tell me the current time?"
+      ],
+      [
+        "en",
+        "what's the time now?"
+      ],
+      [
+        "en",
+        "what is today's date?"
+      ],
+      [
+        "en",
+        "can you tell me the date today?"
+      ],
+      [
+        "en",
+        "what's the date today?"
+      ],
+      [
+        "en",
+        "can you tell me a joke?"
+      ],
+      [
+        "en",
+        "do you know any jokes?"
+      ],
+      [
+        "en",
+        "make me laugh."
+      ],
+      [
+        "en",
+        "tell me an interesting fact."
+      ],
+      [
+        "en",
+        "do you know any fun facts?"
+      ],
+      [
+        "en",
+        "can you share a fact with me?"
+      ],
+      [
+        "en",
+        "I need help."
+      ],
+      [
+        "en",
+        "can you assist me?"
+      ],
+      [
+        "en",
+        "how can you help me?"
+      ],
+      [
+        "en",
+        "what's your favorite music?"
+      ],
+      [
+        "en",
+        "do you like music?"
+      ],
+      [
+        "en",
+        "can you recommend a song?"
+      ],
+      [
+        "en",
+        "what's the latest news?"
+      ],
+      [
+        "en",
+        "can you tell me the news?"
+      ],
+      [
+        "en",
+        "what's happening in the world?"
+      ],
+      [
+        "en",
+        "bye"
+      ],
+      [
+        "en",
+        "goodbye"
+      ],
+      [
+        "en",
+        "see you later"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "about.from": [
+          {
+            "answer": "I am from Warakapola."
+          },
+          {
+            "answer": "My village is Warakapola."
+          }
+        ],
+        "about.name": [
+          {
+            "answer": "My name is ChatBot."
+          },
+          {
+            "answer": "I am called ChatBot."
+          }
+        ],
+        "about.age": [
+          {
+            "answer": "I am a machine, I don't have an age."
+          },
+          {
+            "answer": "I am ageless."
+          }
+        ],
+        "about.language": [
+          {
+            "answer": "I can communicate in many languages, including English."
+          },
+          {
+            "answer": "I am proficient in multiple languages, with English being one of them."
+          }
+        ],
+        "about.creator": [
+          {
+            "answer": "I was created by a team of developers."
+          },
+          {
+            "answer": "A group of talented developers built me."
+          }
+        ],
+        "about.purpose": [
+          {
+            "answer": "I am here to assist you with any questions you might have."
+          },
+          {
+            "answer": "My purpose is to help users by answering their queries."
+          }
+        ],
+        "about.hobby": [
+          {
+            "answer": "I enjoy learning new things and helping people."
+          },
+          {
+            "answer": "My primary interest is assisting users like you."
+          }
+        ],
+        "about.favorite_color": [
+          {
+            "answer": "I don't have a favorite color, but I think all colors are beautiful."
+          },
+          {
+            "answer": "As an AI, I don't have preferences, but I appreciate the beauty of all colors."
+          }
+        ],
+        "about.food": [
+          {
+            "answer": "I don't eat, but I can help you find recipes or restaurants."
+          },
+          {
+            "answer": "I don't have the ability to eat, but I can recommend some good dishes."
+          }
+        ],
+        "about.weather": [
+          {
+            "answer": "I'm not sure about the current weather, but you can check your local weather app."
+          },
+          {
+            "answer": "I can't provide live weather updates, but there are many apps and websites that can."
+          }
+        ],
+        "about.time": [
+          {
+            "answer": "I can't provide the current time, but you can check the time on your device."
+          },
+          {
+            "answer": "Please check your device for the current time."
+          }
+        ],
+        "about.date": [
+          {
+            "answer": "You can check your device for today's date."
+          },
+          {
+            "answer": "Please refer to your device for the current date."
+          }
+        ],
+        "about.joke": [
+          {
+            "answer": "Why don't scientists trust atoms? Because they make up everything!"
+          },
+          {
+            "answer": "Why did the scarecrow win an award? Because he was outstanding in his field!"
+          }
+        ],
+        "about.fact": [
+          {
+            "answer": "Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still edible."
+          },
+          {
+            "answer": "Did you know that octopuses have three hearts? Two pump blood to the gills, and one pumps it to the rest of the body."
+          }
+        ],
+        "about.help": [
+          {
+            "answer": "Sure, I'm here to help! What do you need assistance with?"
+          },
+          {
+            "answer": "Of course! Please tell me how I can assist you."
+          }
+        ],
+        "about.music": [
+          {
+            "answer": "I don't listen to music, but I can help you find popular songs or artists."
+          },
+          {
+            "answer": "I don't have personal preferences, but I can suggest some trending music if you like."
+          }
+        ],
+        "about.news": [
+          {
+            "answer": "I don't have live news updates, but you can check news websites or apps for the latest information."
+          },
+          {
+            "answer": "For the latest news, please refer to a reliable news source or app."
+          }
+        ],
+        "about.goodbye": [
+          {
+            "answer": "Goodbye! Have a great day!"
+          },
+          {
+            "answer": "See you later! Take care!"
+          }
+        ],
+        "greeting": [
+          {
+            "answer": "Hello! How can I assist you today?"
+          },
+          {
+            "answer": "Hi there! What can I do for you?"
+          },
+          {
+            "answer": "Hey! How can I help you?"
+          },
+          {
+            "answer": "Good morning! What can I help you with?"
+          },
+          {
+            "answer": "Good afternoon! How can I assist you?"
+          },
+          {
+            "answer": "Good evening! What do you need help with?"
+          },
+          {
+            "answer": "Howdy! What can I do for you today?"
+          },
+          {
+            "answer": "Greetings! How may I assist you?"
+          },
+          {
+            "answer": "Hi there! How can I be of service?"
+          },
+          {
+            "answer": "Hey there! How can I assist you today?"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

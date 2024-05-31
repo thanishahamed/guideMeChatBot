@@ -1,0 +1,190 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "is,lanka,of,presid,sri,the,who": {
+            "intent": "srilanka.president",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "srilanka.president": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "who is the president of sri lanka?",
+            "intent": "srilanka.president"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "who": 1,
+              "is": 1,
+              "the": 1,
+              "presid": 1,
+              "of": 1,
+              "sri": 1,
+              "lanka": 1
+            },
+            "intents": {
+              "srilanka.president": 1
+            },
+            "intentFeatures": {
+              "srilanka.president": {
+                "who": 1,
+                "is": 1,
+                "the": 1,
+                "presid": 1,
+                "of": 1,
+                "sri": 1,
+                "lanka": 1
+              }
+            },
+            "featuresToIntent": {
+              "who": [
+                "srilanka.president"
+              ],
+              "is": [
+                "srilanka.president"
+              ],
+              "the": [
+                "srilanka.president"
+              ],
+              "presid": [
+                "srilanka.president"
+              ],
+              "of": [
+                "srilanka.president"
+              ],
+              "sri": [
+                "srilanka.president"
+              ],
+              "lanka": [
+                "srilanka.president"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "who",
+                "is",
+                "the",
+                "presid",
+                "of",
+                "sri",
+                "lanka"
+              ],
+              "intents": [
+                "srilanka.president"
+              ],
+              "perceptrons": [
+                [
+                  1.9031801223754883,
+                  1.9031801223754883,
+                  1.9031801223754883,
+                  1.9031801223754883,
+                  1.9031801223754883,
+                  1.9031801223754883,
+                  1.9031801223754883,
+                  0.9560450657543925
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "who is the president of sri lanka?"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "srilanka.president": [
+          {
+            "answer": "ranil"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

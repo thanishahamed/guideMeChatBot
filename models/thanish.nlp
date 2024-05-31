@@ -1,0 +1,165 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "creat,me,who": {
+            "intent": "about",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "about": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Who created me?",
+            "intent": "about"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "who": 1,
+              "creat": 1,
+              "me": 1
+            },
+            "intents": {
+              "about": 1
+            },
+            "intentFeatures": {
+              "about": {
+                "who": 1,
+                "creat": 1,
+                "me": 1
+              }
+            },
+            "featuresToIntent": {
+              "who": [
+                "about"
+              ],
+              "creat": [
+                "about"
+              ],
+              "me": [
+                "about"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "who",
+                "creat",
+                "me"
+              ],
+              "intents": [
+                "about"
+              ],
+              "perceptrons": [
+                [
+                  4.106055736541748,
+                  4.106055736541748,
+                  4.106055736541748,
+                  2.0879259344517775
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "Who created me?"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "about": [
+          {
+            "answer": "Team of ESOT students"
+          },
+          {
+            "answer": "an IT student set"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
